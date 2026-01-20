@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Desenvolvedor Full Stack Junior</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            height: auto;
+            background: white;
+            margin: 0 auto;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 8px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            margin-top: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            text-transform: uppercase;
+        }
+
+        .subsection {
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            color: #3498db;
+            font-weight: 500;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .period {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 13px;
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+            color: #34495e;
+        }
+
+        li:before {
+            content: "▸";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .skill-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            border-left: 3px solid #3498db;
+        }
+
+        .metric {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .keyword {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+                padding: 20px;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0.5cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="name">Samuel Muniz</div>
+            <div class="title">Desenvolvedor Full Stack Junior | React.js • Java</div>
+            <div class="contact">📧 <a href="mailto:msamuelmuniz@gmail.com?subject=Dúvida&body=Olá, gostaria de saber mais sobre...">
+   Entre em Contato </a> | 📱 <a href="https://wa.me/5511992320475?text=Olá%20Samuel,%20vi%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade.">
+   Fale comigo no WhatsApp
+</a> | <br>🔗 <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/">linkedin</a> | <a href="https://github.com/SamuelMuniz9">GitHub</a></div>
+        </div>
+
+        <!-- CONHECIMENTOS PRINCIPAIS -->
+        <div class="section">
+            <div class="section-title">Conhecimentos Principais</div>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">SQL/NoSQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">IA & Ferramentas</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChatGPT API</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">Devops & Ferramentas</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- FORMAÇÃO ACADEMICA-->
+        <div class="section">
+            <div class="section-title">Formação Acadêmica</div>
+            <div class="subsection">
+                <div class="job-title">Pós-Graduação em Inteligência Artificial e Ciência de Dados</div>
+                <div class="company">Anhembi Morumbi</div>
+                <div class="period"> Jan 2026 - Atual</div>
+            </div>
+            <div class="subsection">
+                <div class="job-title">Análise e Desenvolvimento de Sistemas</div>
+                <div class="company">UMC - Universidade de Mogi das Cruzes</div>
+                <div class="period">Concluído</div>
+            </div>
+            <div class="subsection">
+                <div class="job-title">Técnico em Mecatrônica</div>
+                <div class="company">ETEC - Escola Técnica Estadual</div>
+                <div class="period">Concluído</div>
+            </div>
+        </div>
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+<div class="section">
+            <div class="section-title">Experiência Profissional</div>
+
+            <div class="subsection">
+                <div class="job-title">Desenvolvedor Front-End Júnior (Contrato)</div>
+                <div class="company">Saphir Educ</div>
+                <div class="period">OUT 2025 - Atual</div>
+                <ul>
+                    <li>Desenvolvimento de <span class="keyword">interfaces em React.js</span> com foco em componentes reutilizáveis e estados globais</li>
+                    <li>Otimização de <span class="metric">performance de carregamento</span> através de técnicas de Lazy Loading e refatoração de código</li>
+                    <li>Integração com <span class="keyword">IA Generativa (ChatGPT API)</span> para automação de geração de conteúdos e documentos</li>
+                    <li>Consumo de <span class="keyword">APIs REST</span> para exibição dinâmica de dados no dashboard administrativo</li>
+                    <li>Implementação de layouts responsivos garantindo a experiência do usuário em diversos dispositivos</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <div class="job-title">Freelancer Frontend & IA</div>
+                <div class="company">Projeto Freelancer</div>
+                <div class="period">NOV 2025 - Atual</div>
+                <ul>
+                    <li>Criação de <span class="keyword">Landing Pages em React</span> utilizando boas práticas de SEO e acessibilidade</li>
+                    <li>Implementação de <span class="keyword">Prompt Engineering</span> para otimizar fluxos de atendimento automatizados</li>
+                    <li>Manutenção de repositórios no <span class="keyword">GitHub</span> com controle de versão rigoroso via Git</li>
+                    <li>Transformação de protótipos de design em código funcional com fidelidade visual</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Skills Técnicas</div>
+            <ul>
+                <li><span class="keyword">Frontend Principal:</span> React.js, JavaScript (ES6+), TypeScript, HTML5 e CSS3</li>
+                <li><span class="keyword">Ecossistema React:</span> Hooks (useState, useEffect), Context API e Styled Components</li>
+                <li><span class="keyword">Inteligência Artificial:</span> Integração de APIs da OpenAI, Prompt Engineering e Automação Low-Code</li>
+                <li><span class="keyword">Ferramentas de Desenvolvimento:</span> Git, GitHub, VS Code, NPM/Yarn</li>
+                <li><span class="keyword">Conhecimentos Complementares:</span> Noções de Java/Spring Boot (Back-end) e Bancos de Dados SQL</li>
+                <li><span class="keyword">Soft Skills:</span> Comunicação clara, resolução de problemas e adaptabilidade rápida</li>
+                <li><span class="keyword">Idiomas:</span> Inglês Intermediário (Evoluindo Conversação)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Inovação e Inteligência Artificial</div>
+            <ul>
+                <li><span class="keyword">Automação Inteligente:</span> Redução de processos manuais através de integrações via API e IA Generativa</li>
+                <li><span class="keyword">Otimização de Respostas:</span> Refinamento de prompts para aumento de <span class="metric">35% na acurácia</span> de assistentes virtuais</li>
+                <li><span class="keyword">Projetos Modernos:</span> Foco em arquiteturas modernas que priorizam o tempo de resposta e a experiência do usuário final</li>
+            </ul>
+        </div>
+</body>
+</html>
