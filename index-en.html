@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Full Stack Junior Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            height: auto;
+            background: white;
+            margin: 0 auto;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 8px;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            margin-top: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            text-transform: uppercase;
+        }
+
+        .subsection {
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            color: #3498db;
+            font-weight: 500;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .period {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 13px;
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+            color: #34495e;
+        }
+
+        li:before {
+            content: "▸";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .skill-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            border-left: 3px solid #3498db;
+        }
+
+        .metric {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .keyword {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+                padding: 20px;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0.5cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="name">Samuel Muniz</div>
+            <div class="title">Full Stack Junior Developer | Java • Spring Boot • React.js • Angular • AI</div>
+            <div class="contact">
+                📧 <a href="mailto:msamuelmuniz@gmail.com?subject=Professional%20Opportunity&body=Hi%20Samuel,%20I%20saw%20your%20profile%20and%20would%20like%20to%20discuss%20an%20opportunity.">msamuelmuniz@gmail.com</a> | 
+                📱 <a href="tel:+5511992320475">+55 (11) 99232-0475</a> | 
+                🔗 <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/SamuelMuniz9" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <!-- TECHNICAL KNOWLEDGE -->
+        <div class="section">
+            <div class="section-title">Technical Knowledge</div>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category">Backend (Focus)</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java 17</span>
+                        <span class="skill-tag">Spring Boot 3</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">AI & Automation</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChatGPT API</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Edge Computing</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">DevOps & Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Azure Interest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- ACADEMIC BACKGROUND -->
+       <div class="section">
+            <div class="section-title">Academic Background</div>
+            <div class="subsection">
+                <div class="job-title">Post-Graduate Degree in Artificial Intelligence and Data Science</div>
+                <div class="company">Anhembi Morumbi University</div>
+                <div class="period">Jan 2026 - Present</div>
+            </div>
+            <div class="subsection">
+                <div class="job-title">Analysis and Systems Development</div>
+                <div class="company">UMC - University of Mogi das Cruzes</div>
+                <div class="period">Completed</div>
+            </div>
+            <div class="subsection">
+                <div class="job-title">Technical Degree in Mechatronics</div>
+                <div class="company">ETEC - State Technical School</div>
+                <div class="period">Completed</div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="subsection">
+                <div class="job-title">Junior Developer (Contract)</div>
+                <div class="company">Saphir Educ</div>
+                <div class="period">OCT 2025 - Present</div>
+                <ul>
+                    <li><span class="keyword">Backend in Java/Spring Boot:</span> Implemented scalable REST APIs with Spring Data JPA, resulting in <span class="metric">20% reduction in response time</span> and production-ready architecture.</li>
+                    <li><span class="keyword">Frontend in React/Angular:</span> Developed modular and responsive interfaces, enabling <span class="metric">80% component reusability</span> across different modules.</li>
+                    <li><span class="keyword">Generative AI Integration:</span> Implemented ChatGPT API for document automation, eliminating repetitive tasks and saving <span class="metric">15 hours monthly</span> of manual team work.</li>
+                    <li><span class="keyword">Architecture Best Practices:</span> Organized code in Controller/Service/Repository pattern, ensuring clean, testable and maintainable code.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <div class="job-title">Full Stack Developer Freelancer</div>
+                <div class="company">Independent Projects</div>
+                <div class="period">DEC 2025 - Present</div>
+                <ul>
+                    <li><span class="keyword">Landing Pages & SPAs in React:</span> Created frontend solutions with UX/UI focus, raising conversion rates for clients by <span class="metric">up to 35%</span>.</li>
+                    <li><span class="keyword">Prompt Engineering:</span> Optimized AI virtual assistants, increasing response accuracy by <span class="metric">45%</span> and improving automated support efficiency.</li>
+                    <li><span class="keyword">Full Stack Development:</span> Structured SQL databases and REST APIs for small-scale applications, ensuring data integrity and scalability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RELEVANT PROJECTS -->
+        <div class="section">
+            <div class="section-title">Relevant Projects</div>
+
+            <div class="subsection">
+                <div class="job-title">🏥 Muscle API - Remote ICU Equipment Monitoring System (HealthTech)</div>
+                <div class="company">Personal MVP | IoT + Web Ecosystem</div>
+                <div class="period">2024 - 2025</div>
+                <ul>
+                    <li><span class="keyword">Did:</span> Developed a complete remote hospital equipment monitoring ecosystem using <span class="keyword">Python for Edge Computing</span> (simulating Raspberry Pi), data integration via JSON/API and React Web Dashboard.</li>
+                    <li><span class="keyword">Measured by:</span> System capable of processing <span class="metric">1000+ events/hour</span> with average latency of <span class="metric">200ms</span>, generating real-time alerts.</li>
+                    <li><span class="keyword">Resulting in:</span> <span class="metric">40% reduction in emergency response time</span> and implementation of predictive maintenance, with future roadmap for LGPD compliance (data encryption, access tokens) and indoor geolocation to optimize hospital workflow.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <div class="job-title">🦾 Robotic Orthosis for Upper Limb Rehabilitation (TCC/Research)</div>
+                <div class="company">UMC - Post-Graduate Research Collaboration</div>
+                <div class="period">2024 - 2025</div>
+                <ul>
+                    <li><span class="keyword">Did:</span> Implemented control and automation system for elbow orthosis using <span class="keyword">Raspberry Pi Pico H (C++/Python)</span>, biomechanical signal processing and assisted movement control logic.</li>
+                    <li><span class="keyword">Measured by:</span> Functional prototype with <span class="metric">95% precision</span> in movements and latency <span class="metric">below 50ms</span> for sensory feedback.</li>
+                    <li><span class="keyword">Resulting in:</span> <span class="metric">Low-cost and high-efficiency</span> solution for assisted physical therapy, demonstrating ability to integrate <span class="keyword">mechatronics + embedded software</span> concepts to solve complex healthcare problems.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <div class="job-title">💻 Muscle API - Backend in Spring Boot 3 (Full Stack Integration)</div>
+                <div class="company">Personal Project | REST API + Security</div>
+                <div class="period">2025</div>
+                <ul>
+                    <li><span class="keyword">Did:</span> Architected a robust REST API in <span class="keyword">Spring Boot 3 with Spring Data JPA</span>, implementing CORS security, JWT authentication and scalable database structure.</li>
+                    <li><span class="keyword">Measured by:</span> <span class="metric">100% coverage</span> of critical endpoints, <span class="metric">average latency of 150ms</span> and compliance with SOLID architecture patterns.</li>
+                    <li><span class="keyword">Resulting in:</span> Solid foundation for Full Stack integration with React and Angular frontends, demonstrating mastery of backend best practices and readiness for corporate environments like Avanade.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <ul>
+                <li><span class="keyword">Primary Backend:</span> Java 17, Spring Boot 3, Spring Data JPA, REST APIs, Controller/Service/Repository architecture</li>
+                <li><span class="keyword">Frontend:</span> React.js, Angular, JavaScript (ES6+), TypeScript, HTML5 and CSS3, REST API consumption</li>
+                <li><span class="keyword">Artificial Intelligence:</span> ChatGPT/OpenAI Integration, Prompt Engineering, Edge Computing, AI automation</li>
+                <li><span class="keyword">Databases:</span> PostgreSQL, SQL, relational design, query optimization</li>
+                <li><span class="keyword">DevOps & Tools:</span> Docker, Git/GitHub, NPM/Maven, VS Code</li>
+                <li><span class="keyword">Architecture & Clean Code:</span> Focus on code organization, design patterns (DTO, Service Locator), SOLID best practices</li>
+                <li><span class="keyword">Development Objective:</span> Specialization in cloud ecosystem (Azure) and Microsoft solutions for enterprise architectures</li>
+                <li><span class="keyword">Soft Skills:</span> Clear communication, agile problem-solving, continuous learning, adaptability to new technologies</li>
+            </ul>
+        </div>
+
+        <!-- DIFFERENTIALS -->
+        <div class="section">
+            <div class="section-title">Differentials & Business Vision</div>
+            <ul>
+                <li><span class="keyword">Rapidly Evolving Developer:</span> Consolidated trajectory in Java/Spring Boot with delivery of functional and well-structured production code.</li>
+                <li><span class="keyword">Business Vision:</span> Proven ability to translate requirements into technology solutions with measurable impact (time reduction, hour savings, conversion increase).</li>
+                <li><span class="keyword">Technical Entrepreneurship:</span> Experience creating MVPs and functional prototypes (HealthTech, Robotic Orthosis), demonstrating autonomy and capacity to solve complex problems.</li>
+                <li><span class="keyword">AI Training:</span> Ongoing post-graduate degree in Artificial Intelligence, positioning as a professional prepared for future demands of generative technology.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

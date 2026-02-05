@@ -15,24 +15,23 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #2c3e50;
             background: #f5f5f5;
-            padding: 20px;
+            padding: 15px;
         }
 
         .container {
             max-width: 8.5in;
-            height: auto;
             background: white;
             margin: 0 auto;
-            padding: 40px;
+            padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #3498db;
         }
 
         .name {
@@ -43,109 +42,119 @@
         }
 
         .title {
-            font-size: 16px;
+            font-size: 14px;
             color: #3498db;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact {
             font-size: 12px;
             color: #7f8c8d;
-            margin-top: 8px;
+            margin-top: 6px;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             page-break-inside: avoid;
         }
 
         .section-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 12px;
-            margin-top: 15px;
-            padding-bottom: 8px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            padding-bottom: 5px;
             border-bottom: 2px solid #3498db;
             text-transform: uppercase;
         }
 
         .subsection {
-            margin-bottom: 15px;
-            padding-left: 0;
+            margin-bottom: 10px;
         }
 
         .job-title {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 3px;
         }
 
         .company {
             color: #3498db;
             font-weight: 500;
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 2px;
         }
 
         .period {
-            font-size: 12px;
+            font-size: 11px;
             color: #7f8c8d;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-style: italic;
         }
 
         ul {
             list-style: none;
             padding-left: 0;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         li {
-            font-size: 13px;
-            margin-bottom: 6px;
-            padding-left: 20px;
+            font-size: 12px;
+            margin-bottom: 4px;
+            padding-left: 18px;
             position: relative;
             color: #34495e;
+            line-height: 1.4;
         }
 
         li:before {
-            content: "▸";
+            content: "•";
             color: #3498db;
             font-weight: bold;
             position: absolute;
             left: 0;
         }
 
-        .skills-grid {
+        .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 10px;
+            gap: 12px;
         }
 
         .skill-category {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 13px;
-            margin-bottom: 5px;
+            font-size: 12px;
+            margin-bottom: 4px;
+            margin-top: 4px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 5px;
+            gap: 6px;
+            margin-bottom: 8px;
         }
 
         .skill-tag {
             background: #ecf0f1;
             color: #2c3e50;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 12px;
+            padding: 4px 9px;
+            border-radius: 3px;
+            font-size: 11px;
             font-weight: 500;
             border-left: 3px solid #3498db;
         }
@@ -158,6 +167,33 @@
         .keyword {
             color: #e74c3c;
             font-weight: 500;
+        }
+
+        .project-line {
+            font-size: 12px;
+            margin-bottom: 5px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .project-line:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .project-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 11px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
         }
 
         @media print {
@@ -187,122 +223,117 @@
         <!-- HEADER -->
         <div class="header">
             <div class="name">Samuel Muniz</div>
-            <div class="title">Desenvolvedor Full Stack Junior | React.js • Java • IA</div>
-            <div class="contact">📧 <a href="mailto:msamuelmuniz@gmail.com?subject=Dúvida&body=Olá, gostaria de saber mais sobre...">
-   Entre em Contato </a> | 📱 <a href="https://wa.me/5511992320475?text=Olá%20Samuel,%20vi%20seu%20perfil%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade.">
-   Fale comigo no WhatsApp
-</a> | <br>🔗 <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/">linkedin</a> | <a href="https://github.com/SamuelMuniz9">GitHub</a></div>
+            <div class="title">Full Stack Junior Developer | Java • Spring Boot • Angular</div>
+            <div class="contact">
+                📧 <a href="mailto:msamuelmuniz@gmail.com">msamuelmuniz@gmail.com</a> | 
+                📱 <a href="https://wa.me/5511992320475?text=Ol%C3%A1%20Samuel">Entre em Contato</a> | 
+                🔗 <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/SamuelMuniz9" target="_blank">GitHub</a>
+            </div>
         </div>
 
-        <!-- CONHECIMENTOS PRINCIPAIS -->
+        <!-- SKILLS & FORMAÇÃO (2 COLUNAS) -->
         <div class="section">
-            <div class="section-title">Conhecimentos Principais</div>
-            <div class="skills-grid">
-                <div>
-                    <div class="skill-category">Frontend</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">HTML5/CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
+            <div class="section-title">Skills Técnicos & Formação</div>
+            <div class="two-column">
                 <div>
                     <div class="skill-category">Backend</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">SQL/NoSQL</span>
+                        <span class="skill-tag">Java 17</span>
+                        <span class="skill-tag">Spring Boot 3</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag">REST APIs</span>
                     </div>
-                </div>
-                <div>
-                    <div class="skill-category">IA & Ferramentas</div>
+                    <div class="skill-category">Frontend</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">ChatGPT API</span>
-                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                    </div>
+                    <div class="skill-category">IA & Automação</div>
+                    <div class="skill-tags">
                         <span class="skill-tag">OpenAI</span>
                         <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Edge Computing</span>
+                    </div>
+                    <div class="skill-category">DevOps & BD</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Git</span>
                     </div>
                 </div>
                 <div>
-                    <div class="skill-category">Devops & Ferramentas</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                    </div>
+                    <div class="skill-category">Formação Acadêmica</div>
+                    <ul>
+                        <li><strong>Pós-Graduação em Inteligencia Artificial para Desenvolvedor</strong> UMC (2026-Atual)</li>
+                        <br>
+                        <li><strong>Análise e Desenvolvimento de Sistemas</strong> - UMC(Concluído)</li>
+                        <br>
+                        <li><strong>Técnico em Mecatrônica</strong> - ETEC(Concluído)</li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>
-      
-        <!-- FORMAÇÃO ACADEMICA-->
-       <div class="section">
-            <div class="section-title">Formação Acadêmica</div>
+
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+        <div class="section">
+            <div class="section-title">Experiência Profissional</div>
+
             <div class="subsection">
-                <div class="job-title">Pós-Graduação em Inteligência Artificial e Ciência de Dados</div>
-                <div class="company">Anhembi Morumbi</div>
-                <div class="period">Jan 2026 - Atual</div>
+                <div class="job-title">Desenvolvedor Júnior</div>
+                <div class="company">Saphir Educ | OUT 2025 - Atual</div>
+                <ul>
+                   <ul>
+                    <li>Desenvolvimento Full Stack utilizando <span class="keyword">Java/Spring Boot</span> no backend e <span class="keyword">Angular</span> no frontend, garantindo a entrega de ponta a ponta de novas features.</li>
+                    <li>Criação de APIs REST modulares, facilitando a integração de dados e a manutenção do sistema educacional.</li>
+                    <li>Otimização de componentes de interface para melhorar a experiência do usuário e a performance de carregamento.</li>
+                </ul>
             </div>
+
             <div class="subsection">
-                <div class="job-title">Análise e Desenvolvimento de Sistemas</div>
-                <div class="company">UMC - Universidade de Mogi das Cruzes</div>
-                <div class="period">Concluído</div>
-            </div>
-            <div class="subsection">
-                <div class="job-title">Técnico em Mecatrônica</div>
-                <div class="company">ETEC - Escola Técnica Estadual</div>
-                <div class="period">Concluído</div>
+                <div class="job-title">Full Stack Developer Freelancer</div>
+                <div class="company">Projetos Independentes | DEZ 2025 - Atual</div>
+                <ul>
+                    <li><span class="keyword">Landing Pages:</span> Criei soluções frontend com foco em UX/UI <span class="metric">otimizando a jornada do usuário e a retenção nas páginas dos clientes</span>.</li>
+                    <li><span class="keyword">Prompt Engineering:</span> Otimizei assistentes virtuais com IA, elevando a assertividade das respostas e a eficiência do suporte automatizado através de <span class="metric"> refinamento estratégico de prompts</span>.</li>
+                    <li><span class="keyword">Full Stack Development:</span> Estruturei bancos de dados SQL e APIs REST para aplicações, garantindo integridade e escalabilidade.</li>
+                </ul>
             </div>
         </div>
 
-           <div class="section">
-    <div class="section-title">Experiência Profissional</div>
-
-    <div class="subsection">
-        <div class="job-title">Desenvolvedor Júnior (Contrato)</div>
-        <div class="company">Saphir Educ</div>
-        <div class="period">OUT 2025 - Atual</div>
-        <ul>
-            <li>Desenvolvimento de <span class="keyword">interfaces em React.js</span> utilizando componentes modulares, otimizando o fluxo de criação de novas telas e agilizando a manutenção do código.</li>
-            <li>Otimização de <span class="keyword">performance de carregamento</span> via Lazy Loading e refatoração, melhorando os índices de Core Web Vitals e a experiência de navegação do usuário.</li>
-            <li>Integração com <span class="keyword">IA Generativa (ChatGPT API)</span> para automação de documentos, eliminando tarefas repetitivas e poupando cerca de 15 horas mensais de trabalho manual da equipe.</li>
-            <li>Implementação no consumo de <span class="keyword">APIs REST</span> para dashboards, garantindo a renderização de dados em tempo real com alta fidelidade visual e funcional.</li>
-        </ul>
-    </div>
-
-    <div class="subsection">
-        <div class="job-title">Desenvolvedor Freelancer</div>
-        <div class="company">Projetos Independentes</div>
-        <div class="period">DEZ 2025 - Atual</div>
-        <ul>
-            <li>criação <span class="keyword">Landing Pages em React</span> com foco em UX, elevando a retenção de usuários nas páginas e aumentando a taxa de conversão para os clientes.</li>
-            <li>Aplicação <span class="keyword">Prompt Engineering</span> em assistentes virtuais, elevando a assertividade das respostas e a eficiência do suporte automatizado ao cliente.</li>
-            <li>Utilização de ferramentas de <span class="keyword">IA e Vibe Coding (Base44)</span> para acelerar o ciclo de desenvolvimento, permitindo a entrega de projetos funcionais em prazos reduzidos.</li>
-            <li>Estruturação de bancos de dados com <span class="keyword">SQL</span> para aplicações de pequeno porte, garantindo a integridade das informações e a escalabilidade da solução.</li>
-        </ul>
-    </div>
-</div>
+        <!-- PROJETOS -->
         <div class="section">
-            <div class="section-title">Skills Técnicas</div>
+            <div class="section-title">Projetos Relevantes</div>
+            <div class="project-line"><strong>Startup MVP (HealthTech):</strong> Python/Edge Computing + Dashboard. Monitoramento em tempo real focado em <span class="metric">eliminar latência em manutenções críticas </span>. <a href="https://lnkd.in/dMHaEayK" target="_blank" class="project-link">[Linkedin]</a></div>
+            <div class="project-line"><strong>Órtese Robótica (TCC UMC):</strong> Raspberry Pi Pico (C++/Python) + controle biomecânico. Protótipo funcional para <span class="metric">reabilitação motora assistida</span>. <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/details/education/1722571402040/single-media-viewer/?profileId=ACoAAEdRYBgBKW46UIz0bsYbmx68W1coYzMSS4I" target="_blank" class="project-link">[PDF]</a></div>
+            <div class="project-line"><strong>Muscle API (FullStack):</strong> Spring Boot 3 + JPA + segurança (JWT/CORS). Arquitetura modular com <span class="metric">foco em escalabilidade e consumo de APIs REST</span>. <a href="https://www.linkedin.com/posts/samuel-muniz-a48863294_ol%C3%A1-hoje-venho-compartilhar-um-projeto-activity-7424904063894478848-hBYS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdRYBgBKW46UIz0bsYbmx68W1coYzMSS4I" target="_blank" class="project-link">[Linkedin]</a></div>
+        </div>
+
+        <!-- SKILLS TÉCNICAS -->
+            <div class="section">
+            <div class="section-title">Skills Técnicas Detalhadas</div>
             <ul>
-                <li><span class="keyword">Frontend Principal:</span> React.js, JavaScript (ES6+), TypeScript, HTML5 e CSS3</li>
-                <li><span class="keyword">Ecossistema React:</span> Hooks (useState, useEffect), Context API e Styled Components e Consumo de APIs REST</li>
-                <li><span class="keyword">Inteligência Artificial:</span> Integração de APIs da OpenAI, Prompt Engineering e Automação Low-Code</li>
-                <li><span class="keyword">Ferramentas de Desenvolvimento:</span> Git, GitHub, VS Code, NPM/Yarn</li>
-                <li><span class="keyword">Conhecimentos Complementares:</span> Noções de Java/Spring Boot (Back-end) e Bancos de Dados SQL</li>
-                <li><span class="keyword">Soft Skills:</span> Comunicação clara, resolução de problemas e adaptabilidade rápida</li>
-                <li><span class="keyword">Idiomas:</span> Inglês Intermediário (Evoluindo Conversação)</li>
+                <li><span class="keyword">Backend Primário:</span> Java 17, Spring Boot 3, Spring Data JPA, Hibernate, Segurança com JWT e padrão Controller/Service/Repository.</li>
+                <li><span class="keyword">Frontend & Mobile:</span> Angular, TypeScript, JavaScript ES6+, HTML5 e CSS3 (Sass/Less).</li>
+                <li><span class="keyword">Banco de Dados:</span> PostgreSQL, SQL Server, design de tabelas, relacionamentos e otimização de queries.</li>
+                <li><span class="keyword">Ferramentas & Metodologias:</span> Git/GitHub para versionamento, Maven para gestão de dependências, Postman para testes de API e metodologias Ágeis.</li>
+                <li><span class="keyword">Soft Skills:</span> Comunicação clara, resolução de problemas e <strong>Inglês técnico em desenvolvimento</strong>.</li>
             </ul>
         </div>
 
-        <div class="section">
-            <div class="section-title">Inovação e Inteligência Artificial</div>
+            <div class="section">
+            <div class="section-title">Inovação & Especialização</div>
             <ul>
-                <li><span class="keyword">Automação Inteligente:</span> Redução de processos repetitivos via IA, impactando diretamente na produtividade operacional</li>
-                <li><span class="keyword">Otimização de Respostas:</span> Refinamento estratégico de prompts elevando significativamente a acurácia em modelos de linguagem aplicados</li>
-                <li><span class="keyword">Foco em Performance:</span> Desenvolvimento focado em arquiteturas que priorizam baixo tempo de resposta e escalabilidade</li>
+                <li><span class="keyword">Pós-graduação em IA:</span> Em andamento. Foco em algoritmos de Machine Learning e processamento de dados.</li>
+                <li><span class="keyword">Especialização Microsoft Azure:</span> Roadmap ativo de estudos em fundamentos de nuvem e preparação através do <strong>Bootcamp Avanade Java & Angular (DIO)</strong>, visando o domínio dos padrões técnicos da companhia.</li>
+                <li><span class="keyword">Prompt Engineering:</span> Estudo de técnicas avançadas de instrução em LLMs para automação de tarefas e suporte à eficiência no desenvolvimento de software.</li>
+                <li><span class="keyword">Edge Computing & IoT:</span> Desenvolvimento de soluções de borda utilizando Python e microcontroladores (Raspberry Pi Pico) para coleta de dados em tempo real.</li>
+                <li><span class="keyword">P&D em GenAI:</span> Preparação ativa para a integração de tecnologias generativas no ciclo de vida de desenvolvimento de software (SDLC).</li>
             </ul>
         </div>
+        </div>
+    </div>
 </body>
 </html>
