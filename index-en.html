@@ -11,165 +11,241 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f5;
+            --text-primary: #2c3e50;
+            --text-secondary: #34495e;
+            --accent-color: #3498db;
+            --accent-dark: #2980b9;
+            --accent-red: #e74c3c;
+            --accent-green: #27ae60;
+            --border-color: #ecf0f1;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode {
+            --bg-primary: #1e1e1e;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #e8e8e8;
+            --text-secondary: #b8b8b8;
+            --accent-color: #5dade2;
+            --accent-dark: #3498db;
+            --border-color: #404040;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #2c3e50;
-            background: #f5f5f5;
-            padding: 20px;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            padding: 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-dark);
         }
 
         .container {
             max-width: 8.5in;
-            height: auto;
-            background: white;
+            background: var(--bg-primary);
             margin: 0 auto;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            line-height: 1.6;
+            padding: 30px;
+            box-shadow: 0 0 10px var(--shadow-color);
+            line-height: 1.5;
+            margin-top: 60px;
+            transition: background-color 0.3s;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-color);
         }
 
         .name {
             font-size: 32px;
             font-weight: bold;
-            color: #2c3e50;
+            color: var(--text-primary);
             margin-bottom: 5px;
         }
 
         .title {
-            font-size: 16px;
-            color: #3498db;
+            font-size: 14px;
+            color: var(--accent-color);
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact {
             font-size: 12px;
-            color: #7f8c8d;
-            margin-top: 8px;
+            color: var(--text-secondary);
+            margin-top: 6px;
         }
 
         .contact a {
-            color: #3498db;
+            color: var(--accent-color);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .contact a:hover {
-            color: #2980b9;
+            color: var(--accent-dark);
             text-decoration: underline;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             page-break-inside: avoid;
         }
 
         .section-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 12px;
-            margin-top: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #3498db;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            margin-top: 8px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent-color);
             text-transform: uppercase;
         }
 
         .subsection {
-            margin-bottom: 15px;
-            padding-left: 0;
+            margin-bottom: 10px;
         }
 
         .job-title {
             font-weight: 600;
-            color: #2c3e50;
-            font-size: 14px;
+            color: var(--text-primary);
+            font-size: 13px;
             margin-bottom: 3px;
         }
 
         .company {
-            color: #3498db;
+            color: var(--accent-color);
             font-weight: 500;
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 2px;
         }
 
         .period {
-            font-size: 12px;
-            color: #7f8c8d;
-            margin-bottom: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
             font-style: italic;
         }
 
         ul {
             list-style: none;
             padding-left: 0;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         li {
-            font-size: 13px;
-            margin-bottom: 6px;
-            padding-left: 20px;
+            font-size: 12px;
+            margin-bottom: 4px;
+            padding-left: 18px;
             position: relative;
-            color: #34495e;
+            color: var(--text-secondary);
+            line-height: 1.4;
         }
 
         li:before {
-            content: "▸";
-            color: #3498db;
+            content: "•";
+            color: var(--accent-color);
             font-weight: bold;
             position: absolute;
             left: 0;
         }
 
-        .skills-grid {
+        .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 10px;
+            gap: 12px;
         }
 
         .skill-category {
             font-weight: 600;
-            color: #2c3e50;
-            font-size: 13px;
-            margin-bottom: 5px;
+            color: var(--text-primary);
+            font-size: 12px;
+            margin-bottom: 4px;
+            margin-top: 4px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 5px;
+            gap: 6px;
+            margin-bottom: 8px;
         }
 
         .skill-tag {
-            background: #ecf0f1;
-            color: #2c3e50;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 12px;
+            background: var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 9px;
+            border-radius: 3px;
+            font-size: 11px;
             font-weight: 500;
-            border-left: 3px solid #3498db;
+            border-left: 3px solid var(--accent-color);
+            transition: background-color 0.3s;
         }
 
         .metric {
-            color: #27ae60;
+            color: var(--accent-green);
             font-weight: 600;
         }
 
         .keyword {
-            color: #e74c3c;
+            color: var(--accent-red);
             font-weight: 500;
+        }
+
+        .project-line {
+            font-size: 12px;
+            margin-bottom: 5px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .project-line:before {
+            content: "▸";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 11px;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
         }
 
         @media print {
@@ -177,14 +253,15 @@
                 background: white;
                 padding: 0;
             }
+            .theme-toggle {
+                display: none;
+            }
             .container {
                 box-shadow: none;
                 max-width: 100%;
                 margin: 0;
                 padding: 20px;
-            }
-            .no-print {
-                display: none;
+                background: white;
             }
         }
 
@@ -195,79 +272,62 @@
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
     <div class="container">
         <!-- HEADER -->
         <div class="header">
             <div class="name">Samuel Muniz</div>
-            <div class="title">Full Stack Junior Developer | Java • Spring Boot • React.js • Angular • AI</div>
+            <div class="title">Full Stack Junior Developer | Java • Spring Boot • Angular</div>
             <div class="contact">
-                📧 <a href="mailto:msamuelmuniz@gmail.com?subject=Professional%20Opportunity&body=Hi%20Samuel,%20I%20saw%20your%20profile%20and%20would%20like%20to%20discuss%20an%20opportunity.">msamuelmuniz@gmail.com</a> | 
-                📱 <a href="tel:+5511992320475">+55 (11) 99232-0475</a> | 
+                📧 <a href="mailto:msamuelmuniz@gmail.com">msamuelmuniz@gmail.com</a> | 
+                📱 <a href="https://wa.me/5511992320475?text=Hello%20Samuel">Contact Me</a> | 
                 🔗 <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/" target="_blank">LinkedIn</a> | 
                 <a href="https://github.com/SamuelMuniz9" target="_blank">GitHub</a>
             </div>
         </div>
 
-        <!-- TECHNICAL KNOWLEDGE -->
+        <!-- SKILLS & ACADEMIC BACKGROUND (2 COLUMNS) -->
         <div class="section">
-            <div class="section-title">Technical Knowledge</div>
-            <div class="skills-grid">
+            <div class="section-title">Technical Skills & Academic Background</div>
+            <div class="two-column">
                 <div>
-                    <div class="skill-category">Backend (Focus)</div>
+                    <div class="skill-category">Backend</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Java 17</span>
                         <span class="skill-tag">Spring Boot 3</span>
                         <span class="skill-tag">Spring Data JPA</span>
                         <span class="skill-tag">REST APIs</span>
                     </div>
-                </div>
-                <div>
                     <div class="skill-category">Frontend</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">React.js</span>
                         <span class="skill-tag">Angular</span>
                         <span class="skill-tag">TypeScript</span>
                         <span class="skill-tag">HTML5/CSS3</span>
                     </div>
-                </div>
-                <div>
                     <div class="skill-category">AI & Automation</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">ChatGPT API</span>
                         <span class="skill-tag">OpenAI</span>
                         <span class="skill-tag">Prompt Engineering</span>
                         <span class="skill-tag">Edge Computing</span>
                     </div>
-                </div>
-                <div>
-                    <div class="skill-category">DevOps & Databases</div>
+                    <div class="skill-category">DevOps & Database</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">PostgreSQL</span>
                         <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Azure Interest</span>
                     </div>
                 </div>
-            </div>
-        </div>
-      
-        <!-- ACADEMIC BACKGROUND -->
-       <div class="section">
-            <div class="section-title">Academic Background</div>
-            <div class="subsection">
-                <div class="job-title">Post-Graduate Degree in Artificial Intelligence and Data Science</div>
-                <div class="company">Anhembi Morumbi University</div>
-                <div class="period">Jan 2026 - Present</div>
-            </div>
-            <div class="subsection">
-                <div class="job-title">Analysis and Systems Development</div>
-                <div class="company">UMC - University of Mogi das Cruzes</div>
-                <div class="period">Completed</div>
-            </div>
-            <div class="subsection">
-                <div class="job-title">Technical Degree in Mechatronics</div>
-                <div class="company">ETEC - State Technical School</div>
-                <div class="period">Completed</div>
+                <div>
+                    <div class="skill-category">Academic Background</div>
+                    <ul>
+                        <li><strong>Post-Graduate in Artificial Intelligence for Developers</strong> - UMC (2026-Present)</li>
+                        <br>
+                        <li><strong>Analysis and Systems Development</strong> - UMC (Completed)</li>
+                        <br>
+                        <li><strong>Technical Degree in Mechatronics</strong> - ETEC (Completed)</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -276,25 +336,22 @@
             <div class="section-title">Professional Experience</div>
 
             <div class="subsection">
-                <div class="job-title">Junior Developer (Contract)</div>
-                <div class="company">Saphir Educ</div>
-                <div class="period">OCT 2025 - Present</div>
+                <div class="job-title">Junior Developer</div>
+                <div class="company">Saphir Educ | OCT 2025 - Present</div>
                 <ul>
-                    <li><span class="keyword">Backend in Java/Spring Boot:</span> Implemented scalable REST APIs with Spring Data JPA, resulting in <span class="metric">20% reduction in response time</span> and production-ready architecture.</li>
-                    <li><span class="keyword">Frontend in React/Angular:</span> Developed modular and responsive interfaces, enabling <span class="metric">80% component reusability</span> across different modules.</li>
-                    <li><span class="keyword">Generative AI Integration:</span> Implemented ChatGPT API for document automation, eliminating repetitive tasks and saving <span class="metric">15 hours monthly</span> of manual team work.</li>
-                    <li><span class="keyword">Architecture Best Practices:</span> Organized code in Controller/Service/Repository pattern, ensuring clean, testable and maintainable code.</li>
+                    <li>Full Stack development using <span class="keyword">Java/Spring Boot</span> on backend and <span class="keyword">Angular</span> on frontend, ensuring end-to-end delivery of new features.</li>
+                    <li>Creation of modular REST APIs, facilitating data integration and maintenance of the educational system.</li>
+                    <li>Optimization of interface components to improve user experience and loading performance.</li>
                 </ul>
             </div>
 
             <div class="subsection">
                 <div class="job-title">Full Stack Developer Freelancer</div>
-                <div class="company">Independent Projects</div>
-                <div class="period">DEC 2025 - Present</div>
+                <div class="company">Independent Projects | DEC 2025 - Present</div>
                 <ul>
-                    <li><span class="keyword">Landing Pages & SPAs in React:</span> Created frontend solutions with UX/UI focus, raising conversion rates for clients by <span class="metric">up to 35%</span>.</li>
-                    <li><span class="keyword">Prompt Engineering:</span> Optimized AI virtual assistants, increasing response accuracy by <span class="metric">45%</span> and improving automated support efficiency.</li>
-                    <li><span class="keyword">Full Stack Development:</span> Structured SQL databases and REST APIs for small-scale applications, ensuring data integrity and scalability.</li>
+                    <li><span class="keyword">Landing Pages:</span> Created frontend solutions with UX/UI focus <span class="metric">optimizing user journey and page retention for clients</span>.</li>
+                    <li><span class="keyword">Prompt Engineering:</span> Optimized AI virtual assistants, increasing response accuracy and automated support efficiency through <span class="metric">strategic prompt refinement</span>.</li>
+                    <li><span class="keyword">Full Stack Development:</span> Structured SQL databases and REST APIs for applications, ensuring integrity and scalability.</li>
                 </ul>
             </div>
         </div>
@@ -302,66 +359,61 @@
         <!-- RELEVANT PROJECTS -->
         <div class="section">
             <div class="section-title">Relevant Projects</div>
-
-            <div class="subsection">
-                <div class="job-title">🏥 Muscle API - Remote ICU Equipment Monitoring System (HealthTech)</div>
-                <div class="company">Personal MVP | IoT + Web Ecosystem</div>
-                <div class="period">2024 - 2025</div>
-                <ul>
-                    <li><span class="keyword">Did:</span> Developed a complete remote hospital equipment monitoring ecosystem using <span class="keyword">Python for Edge Computing</span> (simulating Raspberry Pi), data integration via JSON/API and React Web Dashboard.</li>
-                    <li><span class="keyword">Measured by:</span> System capable of processing <span class="metric">1000+ events/hour</span> with average latency of <span class="metric">200ms</span>, generating real-time alerts.</li>
-                    <li><span class="keyword">Resulting in:</span> <span class="metric">40% reduction in emergency response time</span> and implementation of predictive maintenance, with future roadmap for LGPD compliance (data encryption, access tokens) and indoor geolocation to optimize hospital workflow.</li>
-                </ul>
-            </div>
-
-            <div class="subsection">
-                <div class="job-title">🦾 Robotic Orthosis for Upper Limb Rehabilitation (TCC/Research)</div>
-                <div class="company">UMC - Post-Graduate Research Collaboration</div>
-                <div class="period">2024 - 2025</div>
-                <ul>
-                    <li><span class="keyword">Did:</span> Implemented control and automation system for elbow orthosis using <span class="keyword">Raspberry Pi Pico H (C++/Python)</span>, biomechanical signal processing and assisted movement control logic.</li>
-                    <li><span class="keyword">Measured by:</span> Functional prototype with <span class="metric">95% precision</span> in movements and latency <span class="metric">below 50ms</span> for sensory feedback.</li>
-                    <li><span class="keyword">Resulting in:</span> <span class="metric">Low-cost and high-efficiency</span> solution for assisted physical therapy, demonstrating ability to integrate <span class="keyword">mechatronics + embedded software</span> concepts to solve complex healthcare problems.</li>
-                </ul>
-            </div>
-
-            <div class="subsection">
-                <div class="job-title">💻 Muscle API - Backend in Spring Boot 3 (Full Stack Integration)</div>
-                <div class="company">Personal Project | REST API + Security</div>
-                <div class="period">2025</div>
-                <ul>
-                    <li><span class="keyword">Did:</span> Architected a robust REST API in <span class="keyword">Spring Boot 3 with Spring Data JPA</span>, implementing CORS security, JWT authentication and scalable database structure.</li>
-                    <li><span class="keyword">Measured by:</span> <span class="metric">100% coverage</span> of critical endpoints, <span class="metric">average latency of 150ms</span> and compliance with SOLID architecture patterns.</li>
-                    <li><span class="keyword">Resulting in:</span> Solid foundation for Full Stack integration with React and Angular frontends, demonstrating mastery of backend best practices and readiness for corporate environments like Avanade.</li>
-                </ul>
-            </div>
+            <div class="project-line"><strong>Startup MVP (HealthTech):</strong> Python/Edge Computing + Dashboard. Real-time monitoring focused on <span class="metric">eliminating latency in critical maintenance</span>. <a href="https://lnkd.in/dMHaEayK" target="_blank" class="project-link">[LinkedIn]</a></div>
+            <div class="project-line"><strong>Robotic Orthosis (TCC UMC):</strong> Raspberry Pi Pico (C++/Python) + biomechanical control. Functional prototype for <span class="metric">assisted motor rehabilitation</span>. <a href="https://www.linkedin.com/in/samuel-muniz-a48863294/details/education/1722571402040/single-media-viewer/?profileId=ACoAAEdRYBgBKW46UIz0bsYbmx68W1coYzMSS4I" target="_blank" class="project-link">[PDF]</a></div>
+            <div class="project-line"><strong>Muscle API (FullStack):</strong> Spring Boot 3 + JPA + security (JWT/CORS). Modular architecture with <span class="metric">focus on scalability and REST API consumption</span>. <a href="https://www.linkedin.com/posts/samuel-muniz-a48863294_ol%C3%A1-hoje-venho-compartilhar-um-projeto-activity-7424904063894478848-hBYS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdRYBgBKW46UIz0bsYbmx68W1coYzMSS4I" target="_blank" class="project-link">[LinkedIn]</a></div>
         </div>
 
-        <!-- TECHNICAL SKILLS -->
+        <!-- DETAILED TECHNICAL SKILLS -->
         <div class="section">
-            <div class="section-title">Technical Skills</div>
+            <div class="section-title">Detailed Technical Skills</div>
             <ul>
-                <li><span class="keyword">Primary Backend:</span> Java 17, Spring Boot 3, Spring Data JPA, REST APIs, Controller/Service/Repository architecture</li>
-                <li><span class="keyword">Frontend:</span> React.js, Angular, JavaScript (ES6+), TypeScript, HTML5 and CSS3, REST API consumption</li>
-                <li><span class="keyword">Artificial Intelligence:</span> ChatGPT/OpenAI Integration, Prompt Engineering, Edge Computing, AI automation</li>
-                <li><span class="keyword">Databases:</span> PostgreSQL, SQL, relational design, query optimization</li>
-                <li><span class="keyword">DevOps & Tools:</span> Docker, Git/GitHub, NPM/Maven, VS Code</li>
-                <li><span class="keyword">Architecture & Clean Code:</span> Focus on code organization, design patterns (DTO, Service Locator), SOLID best practices</li>
-                <li><span class="keyword">Development Objective:</span> Specialization in cloud ecosystem (Azure) and Microsoft solutions for enterprise architectures</li>
-                <li><span class="keyword">Soft Skills:</span> Clear communication, agile problem-solving, continuous learning, adaptability to new technologies</li>
+                <li><span class="keyword">Primary Backend:</span> Java 17, Spring Boot 3, Spring Data JPA, Hibernate, JWT security and Controller/Service/Repository pattern.</li>
+                <li><span class="keyword">Frontend:</span> Angular, TypeScript, JavaScript ES6+, HTML5 and CSS3 (Sass/Less).</li>
+                <li><span class="keyword">Database:</span> PostgreSQL, SQL Server, table design, relationships and query optimization.</li>
+                <li><span class="keyword">Tools & Methodologies:</span> Git/GitHub for version control, Maven for dependency management, Postman for API testing and Agile methodologies.</li>
+                <li><span class="keyword">Soft Skills:</span> Clear communication, problem-solving and <strong>technical English in development</strong>.</li>
             </ul>
         </div>
 
-        <!-- DIFFERENTIALS -->
+        <!-- INNOVATION & SPECIALIZATION -->
         <div class="section">
-            <div class="section-title">Differentials & Business Vision</div>
+            <div class="section-title">Innovation & Specialization</div>
             <ul>
-                <li><span class="keyword">Rapidly Evolving Developer:</span> Consolidated trajectory in Java/Spring Boot with delivery of functional and well-structured production code.</li>
-                <li><span class="keyword">Business Vision:</span> Proven ability to translate requirements into technology solutions with measurable impact (time reduction, hour savings, conversion increase).</li>
-                <li><span class="keyword">Technical Entrepreneurship:</span> Experience creating MVPs and functional prototypes (HealthTech, Robotic Orthosis), demonstrating autonomy and capacity to solve complex problems.</li>
-                <li><span class="keyword">AI Training:</span> Ongoing post-graduate degree in Artificial Intelligence, positioning as a professional prepared for future demands of generative technology.</li>
+                <li><span class="keyword">Post-Graduate in AI:</span> In progress. Focus on Machine Learning algorithms and data processing.</li>
+                <li><span class="keyword">Microsoft Azure Specialization:</span> Active study roadmap in cloud fundamentals and preparation through <strong>Avanade Java & Angular Bootcamp (DIO)</strong>, aiming to master the company's technical standards.</li>
+                <li><span class="keyword">Prompt Engineering:</span> Study of advanced instruction techniques in LLMs for task automation and efficiency support in software development.</li>
+                <li><span class="keyword">Edge Computing & IoT:</span> Development of edge solutions using Python and microcontrollers (Raspberry Pi Pico) for real-time data collection.</li>
+                <li><span class="keyword">GenAI R&D:</span> Active preparation for integration of generative technologies in the software development lifecycle (SDLC).</li>
             </ul>
         </div>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.querySelector('.theme-toggle');
+            
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+            
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = '☀️ Light Mode';
+            } else {
+                button.textContent = '🌙 Dark Mode';
+            }
+        }
+
+        // Load saved theme preference
+        window.addEventListener('load', () => {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            const button = document.querySelector('.theme-toggle');
+            
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                button.textContent = '☀️ Light Mode';
+            }
+        });
+    </script>
 </body>
 </html>
